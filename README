@@ -1,5 +1,9 @@
-before you can run you must:
+Dyslexic reader is an app design to make using Text to speech simple in the linux world. It is a front end to engines such as festival or swift. It watches the clipboard for changes. When changes are found, it reads the content of the clipboard.
 
+INSTALL:
+Before you can run you must run the following command:
 sudo apt-get install ruby-gnome2 festival vlc
+
+
 
 
