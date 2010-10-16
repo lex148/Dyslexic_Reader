@@ -1,0 +1,5 @@
+before you can run you must:
+
+sudo apt-get install ruby-gnome2 festival vlc
+
+

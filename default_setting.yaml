@@ -1,0 +1,17 @@
+--- &id001 !ruby/object:Setup 
+engine: !ruby/object:Festival {}
+
+engineList: 
+- Swift
+- Festival
+reader: !ruby/object:Reader 
+  engine: !ruby/object:Swift 
+    readerProssess: !ruby/object:IO {}
+
+  mainText: !ruby/object:Gtk::TextView {}
+
+  old_content: |
+    nil
+
+  settings: *id001
+  watchLoop: true
