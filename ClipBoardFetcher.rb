@@ -6,4 +6,4 @@ require 'gtk2'
 
 source = Gtk::Clipboard.get(Gdk::Selection::CLIPBOARD)
 # wait for clipboard content
-puts source.wait_for_text
+puts source.wait_for_text.gsub("'","")
