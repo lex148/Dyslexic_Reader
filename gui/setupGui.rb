@@ -2,21 +2,21 @@
 #
 # This file is gererated by ruby-glade-create-template 1.1.4.
 #
-require 'libglade2'
+#require 'libglade2'
 
 class SetupGlade
-  include GetText
+  #include GetText
 
   attr :setup
   attr :glade
   
-  def initialize(engList, setup, path_or_data, root = nil, domain = nil, localedir = nil, flag = GladeXML::FILE)
-    bindtextdomain(domain, localedir, nil, "UTF-8")
-    @glade = GladeXML.new(path_or_data, root, domain, localedir, flag) {|handler| method(handler)}
-    @glade["cbEngs"].focus_on_click=true
-	engList.each { |eng| @glade["cbEngs"].append_text eng }
-	@glade["cbEngs"].active = 0
-	@setup = setup
+  def initialize(engList, setup, path_or_data, root = nil, domain = nil, localedir = nil)
+    #bindtextdomain(domain, localedir, nil, "UTF-8")
+    #@glade = GladeXML.new(path_or_data, root, domain, localedir, flag) {|handler| method(handler)}
+    #@glade["cbEngs"].focus_on_click=true
+    #engList.each { |eng| @glade["cbEngs"].append_text eng }
+    #@glade["cbEngs"].active = 0
+    #@setup = setup
   end
   
   
