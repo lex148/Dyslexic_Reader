@@ -14,9 +14,9 @@ class DyslexicReaderGlade
   def initialize(path_or_data, root = nil, domain = nil, localedir = nil)
     #bindtextdomain(domain, localedir, nil, "UTF-8")
     #@glade = GladeXML.new(path_or_data, root, domain, localedir, flag) {|handler| method(handler)}
-    #@reader = Reader.new
+    @reader = Reader.new
     #@reader.mainTextArea @glade["txtToRead"]
-    #@reader.watch(true)
+    @reader.watch(true)
   end
   
   def on_cbWatch_toggled(widget)
