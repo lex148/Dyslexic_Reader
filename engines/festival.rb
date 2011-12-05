@@ -5,13 +5,22 @@ class Festival
 
   def read(text)
     stop
-  text = clean text
-    command = "echo \"" + text + "\" | text2wave -o .temp.wav \n"
+    text = clean text
+    `rm .temp.txt`
+    `touch .temp.txt`
+
+    aFile = File.new(".temp.txt", "w")
+    aFile.write(text)
+    aFile.close 
+    voice = "voice_cmu_us_slt_arctic_hts"
+    command = "text2wave -eval \"(#{voice})\" -o .temp.wav .temp.txt\n"
+    #command = "echo \"" + text + "\" | text2wave -o .temp.wav \n"
     # this is blocking, wait for wav file to be created
     outputText = `#{command}`
     puts outputText
     #IO.popen command
-    readStr = "vlc .temp.wav vlc://quit"
+    #readStr = "vlc .temp.wav vlc://quit"
+    readStr = "cvlc .temp.wav vlc://quit"
     puts readStr
     @readerProssess = IO.popen readStr
 
