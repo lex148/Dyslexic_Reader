@@ -19,8 +19,8 @@ class Festival
     outputText = `#{command}`
     puts outputText
     #IO.popen command
-    #readStr = "vlc .temp.wav vlc://quit"
-    readStr = "cvlc .temp.wav vlc://quit"
+    readStr = "vlc .temp.wav vlc://quit"
+    #readStr = "cvlc .temp.wav vlc://quit"
     puts readStr
     @readerProssess = IO.popen readStr
 
