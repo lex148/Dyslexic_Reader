@@ -16,16 +16,8 @@ class Watcher
 
   def getText
     begin
-      source = Gtk::Clipboard.get(Gdk::Selection::CLIPBOARD)
-      #badchars = %w"' ’ – ? …"
-      badchars = "".split(//)
-      #badchars = ["'", "’", "–", "?", "…"]
-      # wait for clipboard content
-      text = source.wait_for_text
-      badchars.each do |c|
-        text = text.gsub(c, "")
-      end
-      text
+      c = `ruby ClipBoardFetcher.rb`
+      c.strip!
     rescue
       ''
     end
