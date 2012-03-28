@@ -10,7 +10,6 @@ class Watcher
 
   def initialize()
     @engine = Festival.new
-    #@engine.read('test goes here')
     clipboardWatch
   end
 
@@ -33,11 +32,11 @@ class Watcher
       if(content and content != @old_content )
         @old_content = content
         @engine.stop
-        @engine.read(content)
         puts "\n" + "*" * 60
         puts content
         puts "*" * 60
         puts "\n\n\n"
+        @engine.read(content)
       end
       sleep(1)
     end
