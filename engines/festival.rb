@@ -12,7 +12,7 @@ class Festival
     aFile.write(text)
     aFile.close 
     voice = "voice_cmu_us_slt_arctic_hts"
-    command = "text2wave -o /dev/stdout .temp.txt | vlc stream:///dev/stdin vlc://quit"
+    command = "text2wave -o /dev/stdout .temp.txt | cvlc stream:///dev/stdin vlc://quit"
     outputText = `#{command}`
   end
 
